@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | History</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h2>EduGenie</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li>
+
+                    <a href="../dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="ask-ai.html">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        Ask AI
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="quiz.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        Quiz Generator
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="summarize.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Summarizer
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="roadmap.html">
+
+                        <i class="fa-solid fa-road"></i>
+
+                        Learning Roadmap
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="history.html">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        History
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#" id="logoutBtn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+        <main class="main">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>
+
+                        📜 Activity History
+
+                    </h2>
+
+                    <p>
+
+                        View your previous AI Chats, Quizzes, Summaries and Learning Roadmaps.
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- HISTORY FILTER -->
+
+            <section class="recent">
+
+                <div class="recent-card">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        flex-wrap:wrap;
+                        gap:20px;
+                    ">
+
+                        <div>
+
+                            <label>
+
+                                <strong>
+
+                                    Select History Type
+
+                                </strong>
+
+                            </label>
+
+                            <br><br>
+
+                            <select id="historyType" style="
+                                width:260px;
+                                padding:14px;
+                                border-radius:12px;
+                                border:1px solid #d1d5db;
+                                outline:none;
+                            ">
+
+                                <option value="chat">
+
+                                    AI Chats
+
+                                </option>
+
+                                <option value="quiz">
+
+                                    Quiz History
+
+                                </option>
+
+                                <option value="summary">
+
+                                    Summary History
+
+                                </option>
+
+                                <option value="roadmap">
+
+                                    Roadmap History
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section> <!-- ===========================
+                HISTORY CONTENT
+        ============================ -->
+
+            <section class="recent" style="margin-top:30px;">
+
+                <div class="recent-card">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:20px;
+                    ">
+
+                        <h2>
+
+                            Your Activity History
+
+                        </h2>
+
+                        <span style="
+                            color:#64748b;
+                            font-size:14px;
+                        ">
+
+                            Powered by EduGenie AI
+
+                        </span>
+
+                    </div>
+
+                    <div id="historyContainer">
+
+                        <div class="welcome-box">
+
+                            <i class="fa-solid fa-clock-rotate-left" style="
+                                font-size:60px;
+                                color:#3b82f6;
+                                margin-bottom:20px;
+                            ">
+                            </i>
+
+                            <h2>
+
+                                Welcome to History
+
+                            </h2>
+
+                            <br>
+
+                            <p>
+
+                                Select a history type above to view your
+                                previous AI conversations, quizzes,
+                                summaries, or learning roadmaps.
+
+                            </p>
+
+                            <br>
+
+                            <p>
+
+                                All your activities generated through
+                                EduGenie AI will appear here.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/history.js"></script>
+
+</body>
+
+</html>

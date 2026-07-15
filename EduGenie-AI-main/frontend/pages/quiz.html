@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | AI Quiz Generator</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h2>EduGenie</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li>
+
+                    <a href="../dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="ask-ai.html">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        Ask AI
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="quiz.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        Quiz Generator
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="summarize.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Summarizer
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="roadmap.html">
+
+                        <i class="fa-solid fa-road"></i>
+
+                        Learning Roadmap
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="history.html">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        History
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#" id="logoutBtn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+        <main class="main">
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>
+
+                        📝 AI Quiz Generator
+
+                    </h2>
+
+                    <p>
+
+                        Generate AI-powered quizzes using Google Gemini.
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- QUIZ FORM -->
+
+            <section class="recent">
+
+                <div class="recent-card">
+
+                    <h2>
+
+                        Generate New Quiz
+
+                    </h2>
+
+                    <br>
+
+                    <div style="
+                        display:grid;
+                        grid-template-columns:2fr 1fr 1fr;
+                        gap:20px;
+                    ">
+
+                        <!-- Topic -->
+
+                        <div>
+
+                            <label>
+
+                                <strong>
+
+                                    Quiz Topic
+
+                                </strong>
+
+                            </label>
+
+                            <input type="text" id="topic" placeholder="Example: Python, Java, DBMS..." style="
+                                width:100%;
+                                margin-top:10px;
+                                padding:15px;
+                                border-radius:12px;
+                                border:1px solid #d1d5db;
+                                outline:none;
+                            ">
+
+                        </div>
+
+                        <!-- Difficulty -->
+
+                        <div>
+
+                            <label>
+
+                                <strong>
+
+                                    Difficulty
+
+                                </strong>
+
+                            </label>
+
+                            <select id="difficulty" style="
+                                width:100%;
+                                margin-top:10px;
+                                padding:15px;
+                                border-radius:12px;
+                            ">
+
+                                <option value="Easy">
+
+                                    Easy
+
+                                </option>
+
+                                <option value="Medium">
+
+                                    Medium
+
+                                </option>
+
+                                <option value="Hard">
+
+                                    Hard
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Question Count -->
+
+                        <div>
+
+                            <label>
+
+                                <strong>
+
+                                    Questions
+
+                                </strong>
+
+                            </label>
+
+                            <select id="questions" style="
+                                width:100%;
+                                margin-top:10px;
+                                padding:15px;
+                                border-radius:12px;
+                            ">
+
+                                <option value="5">
+
+                                    5
+
+                                </option>
+
+                                <option value="10">
+
+                                    10
+
+                                </option>
+
+                                <option value="15">
+
+                                    15
+
+                                </option>
+
+                                <option value="20">
+
+                                    20
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div style="
+                        display:flex;
+                        gap:15px;
+                        flex-wrap:wrap;
+                    ">
+
+                        <button id="generateBtn" class="btn-primary">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            Generate Quiz
+
+                        </button>
+
+                        <button id="clearBtn" class="btn-secondary">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                            Clear
+
+                        </button>
+
+                        <button id="downloadBtn" class="btn-secondary">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Download
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===========================
+                QUIZ RESULT
+        ============================ -->
+
+            <section class="recent" style="margin-top:30px;">
+
+                <div class="recent-card">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:20px;
+                    ">
+
+                        <h2>
+
+                            Generated Quiz
+
+                        </h2>
+
+                        <span style="
+                            color:#64748b;
+                            font-size:14px;
+                        ">
+
+                            Powered by Google Gemini AI
+
+                        </span>
+
+                    </div>
+
+                    <div id="quizContainer">
+
+                        <div class="welcome-box">
+
+                            <i class="fa-solid fa-circle-question" style="
+                                font-size:60px;
+                                color:#3b82f6;
+                                margin-bottom:20px;
+                            ">
+                            </i>
+
+                            <h2>
+
+                                AI Quiz Generator
+
+                            </h2>
+
+                            <br>
+
+                            <p>
+
+                                Enter a topic, choose the difficulty,
+                                select the number of questions and
+                                click <strong>Generate Quiz</strong>.
+
+                            </p>
+
+                            <br>
+
+                            <p>
+
+                                EduGenie AI will instantly create a
+                                personalized quiz for your learning.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/quiz.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Ask AI</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h2>EduGenie</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li>
+
+                    <a href="../dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="ask-ai.html">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        Ask AI
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="quiz.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        Quiz Generator
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="summarize.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Summarizer
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="roadmap.html">
+
+                        <i class="fa-solid fa-road"></i>
+
+                        Learning Roadmap
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="history.html">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        History
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#" id="logoutBtn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+        <main class="main">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>
+
+                        🤖 Ask EduGenie AI
+
+                    </h2>
+
+                    <p>
+
+                        Ask any academic question and receive intelligent answers powered by Google Gemini AI.
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- ASK AI INPUT -->
+
+            <section class="recent">
+
+                <div class="recent-card">
+
+                    <h2>
+
+                        Ask Your Question
+
+                    </h2>
+
+                    <br>
+
+                    <textarea id="question" rows="6"
+                        placeholder="Ask anything... Example: Explain Object-Oriented Programming." style="
+                        width:100%;
+                        padding:18px;
+                        border-radius:12px;
+                        border:1px solid #d1d5db;
+                        resize:vertical;
+                        outline:none;
+                        font-size:15px;
+                        line-height:1.7;
+                        font-family:Poppins,sans-serif;
+                    ">
+
+                </textarea>
+
+                    <br><br>
+
+                    <div style="
+                        display:flex;
+                        gap:15px;
+                        flex-wrap:wrap;
+                    ">
+
+                        <button id="askBtn" class="btn-primary">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Ask AI
+
+                        </button>
+
+                        <button id="clearBtn" class="btn-secondary">
+
+                            <i class="fa-solid fa-trash"></i>
+
+                            Clear Chat
+
+                        </button>
+
+                        <button id="copyBtn" class="btn-secondary">
+
+                            <i class="fa-solid fa-copy"></i>
+
+                            Copy Answer
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section> <!-- ===========================
+                CHAT AREA
+        ============================ -->
+
+            <section class="recent" style="margin-top:30px;">
+
+                <div class="recent-card">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:20px;
+                    ">
+
+                        <h2>
+
+                            AI Conversation
+
+                        </h2>
+
+                        <span style="
+                            color:#64748b;
+                            font-size:14px;
+                        ">
+
+                            Powered by Google Gemini AI
+
+                        </span>
+
+                    </div>
+
+                    <div id="chatContainer" style="
+                        min-height:500px;
+                        max-height:600px;
+                        overflow-y:auto;
+                        padding:20px;
+                        border:1px solid #e5e7eb;
+                        border-radius:12px;
+                        background:#f8fafc;
+                    ">
+
+                        <div class="welcome-box">
+
+                            <i class="fa-solid fa-robot" style="
+                                font-size:60px;
+                                color:#3b82f6;
+                                margin-bottom:20px;
+                            ">
+                            </i>
+
+                            <h2>
+
+                                Welcome to EduGenie AI
+
+                            </h2>
+
+                            <br>
+
+                            <p>
+
+                                Ask any academic question related to
+                                programming, engineering, mathematics,
+                                science, aptitude, or technology.
+
+                            </p>
+
+                            <br>
+
+                            <p>
+
+                                EduGenie AI will provide detailed,
+                                easy-to-understand answers powered
+                                by Google Gemini AI.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/ask-ai.js"></script>
+
+</body>
+
+</html>

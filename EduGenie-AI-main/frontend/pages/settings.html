@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Settings</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div>
+
+                <div class="logo">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h2>EduGenie</h2>
+
+                </div>
+
+                <ul class="menu">
+
+                    <li>
+
+                        <a href="../dashboard.html">
+
+                            <i class="fa-solid fa-house"></i>
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="ask-ai.html">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                            Ask AI
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="quiz.html">
+
+                            <i class="fa-solid fa-circle-question"></i>
+
+                            Quiz Generator
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="summarize.html">
+
+                            <i class="fa-solid fa-book"></i>
+
+                            Summarizer
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="roadmap.html">
+
+                            <i class="fa-solid fa-road"></i>
+
+                            Learning Roadmap
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="history.html">
+
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            History
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="profile.html">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            Profile
+
+                        </a>
+
+                    </li>
+
+                    <li class="active">
+
+                        <a href="settings.html">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="#" id="logoutBtn">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Logout
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>
+
+                        ⚙️ Settings
+
+                    </h2>
+
+                    <p>
+
+                        Customize your EduGenie experience.
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- Appearance -->
+
+            <section class="recent">
+
+                <div class="recent-card">
+
+                    <h2>
+
+                        Appearance
+
+                    </h2>
+
+                    <br>
+
+                    <label>
+
+                        <strong>
+
+                            Theme
+
+                        </strong>
+
+                    </label>
+
+                    <br><br>
+
+                    <select id="themeSelect" style="
+                        width:250px;
+                        padding:15px;
+                        border-radius:10px;
+                        border:1px solid #ccc;
+                    ">
+
+                        <option value="light">
+
+                            Light Theme
+
+                        </option>
+
+                        <option value="dark">
+
+                            Dark Theme
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+            <!-- Notifications -->
+
+            <section class="recent" style="margin-top:25px;">
+
+                <div class="recent-card">
+
+                    <h2>
+
+                        Notifications
+
+                    </h2>
+
+                    <br>
+
+                    <label>
+
+                        <input type="checkbox" id="notificationToggle" checked>
+
+                        Enable Notifications
+
+                    </label>
+
+                </div>
+
+            </section>
+
+            <!-- Account -->
+
+            <section class="recent" style="margin-top:25px;">
+
+                <div class="recent-card">
+
+                    <h2>
+
+                        Account
+
+                    </h2>
+
+                    <br>
+
+                    <button class="btn-primary" id="saveSettings">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Settings
+
+                    </button>
+
+                    <button style="
+                        margin-left:15px;
+                        background:#ef4444;
+                        color:white;
+                        border:none;
+                        padding:12px 20px;
+                        border-radius:10px;
+                        cursor:pointer;
+                    " id="logoutButton">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/settings.js"></script>
+
+</body>
+
+</html>

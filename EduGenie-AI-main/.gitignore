@@ -1,0 +1,44 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env/
+.venv/
+
+# Environment Variables
+.env
+
+# SQLite Database
+*.db
+*.sqlite3
+
+# Python Cache
+.pytest_cache/
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Node (if added later)
+node_modules/
+
+# Build
+dist/
+build/
+
+# Temporary Files
+*.tmp
+*.temp

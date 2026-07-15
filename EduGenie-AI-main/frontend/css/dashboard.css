@@ -1,0 +1,1795 @@
+/* =====================================================
+                    EDUGENIE UI
+            PROFESSIONAL DASHBOARD CSS
+                PART 1
+===================================================== */
+
+/* ==============================
+            GOOGLE FONT
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==============================
+            VARIABLES
+============================== */
+
+:root{
+
+    --primary:#2563eb;
+
+    --primary-dark:#1d4ed8;
+
+    --secondary:#6366f1;
+
+    --success:#10b981;
+
+    --danger:#ef4444;
+
+    --warning:#f59e0b;
+
+    --text:#1e293b;
+
+    --text-light:#64748b;
+
+    --background:#f1f5f9;
+
+    --card:#ffffff;
+
+    --border:#e2e8f0;
+
+    --shadow:0 10px 30px rgba(15,23,42,.08);
+
+    --radius:18px;
+
+    --transition:.30s ease;
+
+}
+
+/* ==============================
+        RESET
+============================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ==============================
+        SCROLLBAR
+============================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
+
+/* ==============================
+        LINKS
+============================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==============================
+        CONTAINER
+============================== */
+
+.container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ==============================
+        SIDEBAR
+============================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:#fff;
+
+    border-right:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:30px 22px;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    height:100vh;
+
+    transition:var(--transition);
+
+    z-index:999;
+
+}
+
+/* ==============================
+            LOGO
+============================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:40px;
+
+}
+
+.logo-image{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    object-fit:cover;
+
+    box-shadow:0 8px 20px rgba(37,99,235,.18);
+
+}
+
+.logo h2{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+/* ==============================
+        SIDEBAR MENU
+============================== */
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu li{
+
+    margin-bottom:10px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    font-weight:500;
+
+    color:var(--text-light);
+
+    transition:var(--transition);
+
+}
+
+.menu li a i{
+
+    width:22px;
+
+    font-size:18px;
+
+    text-align:center;
+
+}
+
+.menu li a:hover{
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
+}
+
+.menu li.active a{
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+    color:#fff;
+
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+
+/* ==============================
+        MAIN AREA
+============================== */
+
+.main{
+
+    flex:1;
+
+    margin-left:270px;
+
+    padding:35px;
+
+}
+
+/* ==============================
+            TOPBAR
+============================== */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#fff;
+
+    padding:28px 35px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:30px;
+
+}
+
+.topbar h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.topbar p{
+
+    margin-top:6px;
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+/* ==============================
+        TOPBAR RIGHT
+============================== */
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.notification-icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.notification-icon:hover{
+
+    transform:scale(1.08);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==============================
+        SECTION
+============================== */
+
+.recent{
+
+    margin-top:25px;
+
+}
+
+.recent h2{
+
+    margin-bottom:20px;
+
+    font-size:25px;
+
+    font-weight:700;
+
+}
+
+/* ==============================
+        CARD
+============================== */
+
+.recent-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.recent-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(15,23,42,.12);
+
+}
+/* =====================================================
+            EDUGENIE DASHBOARD CSS
+                    PART 2
+===================================================== */
+
+/* ==============================
+        DASHBOARD CARDS
+============================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+
+.card h3{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+}
+
+.card h1{
+
+    font-size:38px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.card p{
+
+    margin-top:10px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+/* ==============================
+        ACTION CARDS
+============================== */
+
+.action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.action-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.action-card i{
+
+    font-size:50px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.action-card h3{
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.action-card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+/* ==============================
+            BUTTONS
+============================== */
+
+.btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+
+}
+
+.btn-secondary{
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==============================
+            INPUTS
+============================== */
+
+input,
+
+textarea,
+
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:15px;
+
+    font-family:"Poppins",sans-serif;
+
+    transition:var(--transition);
+
+    background:#fff;
+
+}
+
+input:focus,
+
+textarea:focus,
+
+select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+    line-height:1.7;
+
+}
+
+/* ==============================
+            LABELS
+============================== */
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==============================
+        FORM GRID
+============================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+
+}
+
+/* ==============================
+        WELCOME BOX
+============================== */
+
+.welcome-box{
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    border:2px dashed #dbeafe;
+
+    border-radius:20px;
+
+    background:#f8fbff;
+
+}
+
+.welcome-box i{
+
+    font-size:65px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.welcome-box h2{
+
+    margin-bottom:15px;
+
+}
+
+.welcome-box p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/* ==============================
+        TABLES
+============================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+table th{
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+table td{
+
+    padding:15px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+table tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/* ==============================
+        GRID HELPERS
+============================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+/* ==============================
+        SIMPLE FADE ANIMATION
+============================== */
+
+.fade-up{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =====================================================
+            EDUGENIE DASHBOARD CSS
+                    PART 3
+===================================================== */
+
+/* ==============================
+            CHAT AREA
+============================== */
+
+.chat-message{
+
+    margin-bottom:25px;
+
+    animation:fadeUp .5s ease;
+
+}
+
+.user-message{
+
+    text-align:right;
+
+}
+
+.ai-message{
+
+    text-align:left;
+
+}
+
+.chat-bubble{
+
+    display:inline-block;
+
+    max-width:85%;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    line-height:1.8;
+
+    word-wrap:break-word;
+
+    font-size:15px;
+
+}
+
+.user-message .chat-bubble{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+}
+
+.ai-message .chat-bubble{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==============================
+            QUIZ CARD
+============================== */
+
+.quiz-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-left:6px solid var(--primary);
+
+    box-shadow:var(--shadow);
+
+    animation:fadeUp .5s ease;
+
+}
+
+.quiz-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.question{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.options label{
+
+    padding:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:1px solid transparent;
+
+}
+
+.options label:hover{
+
+    background:#eef4ff;
+
+    border-color:var(--primary);
+
+}
+
+.answer{
+
+    margin-top:20px;
+
+    background:#ecfdf5;
+
+    border-left:5px solid var(--success);
+
+    padding:15px;
+
+    border-radius:12px;
+
+    color:#065f46;
+
+    font-weight:500;
+
+}
+
+.show-answer-btn{
+
+    margin-top:20px;
+
+    background:var(--success);
+
+    color:#fff;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.show-answer-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==============================
+            ROADMAP
+============================== */
+
+.roadmap-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    animation:fadeUp .5s ease;
+
+}
+
+#roadmapText{
+
+    line-height:2;
+
+    color:var(--text);
+
+}
+
+/* ==============================
+            HISTORY
+============================== */
+
+.history-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border-left:5px solid var(--primary);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.history-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.history-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+.history-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+.history-card small{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:var(--text-light);
+
+}
+
+/* ==============================
+            PROFILE
+============================== */
+
+.profile-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.profile-avatar{
+
+    width:110px;
+
+    height:110px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+}
+
+.profile-info{
+
+    text-align:center;
+
+}
+
+.profile-info h2{
+
+    margin-bottom:8px;
+
+}
+
+.profile-info p{
+
+    color:var(--text-light);
+
+}
+
+/* ==============================
+            LOADING
+============================== */
+
+.loading,
+
+.loading-box{
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+.loading::before,
+
+.loading-box::before{
+
+    content:"";
+
+    width:45px;
+
+    height:45px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+    border:5px solid #dbeafe;
+
+    border-top-color:var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==============================
+            EMPTY STATE
+============================== */
+
+.empty-box{
+
+    text-align:center;
+
+    padding:60px;
+
+    border:2px dashed #dbeafe;
+
+    border-radius:20px;
+
+    background:#f8fbff;
+
+    color:var(--text-light);
+
+}
+
+/* ==============================
+            TOAST
+============================== */
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    background:#fff;
+
+    padding:18px 25px;
+
+    border-radius:14px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+    border-left:6px solid var(--success);
+
+    z-index:9999;
+
+    animation:slideIn .4s ease;
+
+}
+
+.toast.error{
+
+    border-left-color:var(--danger);
+
+}
+
+.toast.warning{
+
+    border-left-color:var(--warning);
+
+}
+
+@keyframes slideIn{
+
+    from{
+
+        transform:translateX(120%);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==============================
+            UTILITIES
+============================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow);
+
+}
+
+.rounded{
+
+    border-radius:20px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+/* =====================================================
+            EDUGENIE DASHBOARD CSS
+                    PART 4
+===================================================== */
+
+/* ==============================
+        TABLET (≤1200px)
+============================== */
+
+@media (max-width:1200px){
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .action-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==============================
+        TABLET (≤992px)
+============================== */
+
+@media (max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+        padding:25px 15px;
+
+    }
+
+    .logo h2{
+
+        display:none;
+
+    }
+
+    .logo{
+
+        justify-content:center;
+
+    }
+
+    .menu li a{
+
+        justify-content:center;
+
+        padding:15px;
+
+    }
+
+    .menu li a span{
+
+        display:none;
+
+    }
+
+    .menu li a i{
+
+        margin:0;
+
+        font-size:22px;
+
+    }
+
+    .main{
+
+        margin-left:90px;
+
+        padding:25px;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .topbar-right{
+
+        width:100%;
+
+        justify-content:flex-end;
+
+    }
+
+}
+
+/* ==============================
+        MOBILE (≤768px)
+============================== */
+
+@media (max-width:768px){
+
+    .main{
+
+        margin-left:0;
+
+        padding:18px;
+
+    }
+
+    .sidebar{
+
+        position:fixed;
+
+        left:-280px;
+
+        width:260px;
+
+        transition:.35s;
+
+    }
+
+    .sidebar.active{
+
+        left:0;
+
+    }
+
+    .topbar{
+
+        padding:20px;
+
+    }
+
+    .topbar h2{
+
+        font-size:24px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .action-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .grid-2,
+
+    .grid-3,
+
+    .grid-4,
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .recent-card{
+
+        padding:20px;
+
+    }
+
+    .chat-bubble{
+
+        max-width:100%;
+
+    }
+
+    .quiz-card{
+
+        padding:20px;
+
+    }
+
+    .history-card{
+
+        padding:20px;
+
+    }
+
+    .profile-card{
+
+        padding:25px;
+
+    }
+
+    .btn-primary,
+
+    .btn-secondary{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .topbar-right{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==============================
+        SMALL MOBILE (≤480px)
+============================== */
+
+@media (max-width:480px){
+
+    body{
+
+        font-size:14px;
+
+    }
+
+    .topbar{
+
+        padding:18px;
+
+    }
+
+    .topbar h2{
+
+        font-size:21px;
+
+    }
+
+    .logo-image{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+    .card h1{
+
+        font-size:28px;
+
+    }
+
+    .welcome-box{
+
+        padding:35px 18px;
+
+    }
+
+    .welcome-box i{
+
+        font-size:45px;
+
+    }
+
+    .recent-card{
+
+        padding:18px;
+
+    }
+
+    textarea{
+
+        min-height:180px;
+
+    }
+
+}
+
+/* ==============================
+        HOVER ANIMATIONS
+============================== */
+
+button,
+
+.card,
+
+.action-card,
+
+.history-card,
+
+.quiz-card,
+
+.recent-card{
+
+    transition:all .30s ease;
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+input,
+
+textarea,
+
+select{
+
+    transition:all .25s ease;
+
+}
+
+/* ==============================
+        IMAGE STYLES
+============================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+.logo-image{
+
+    object-fit:contain;
+
+}
+
+/* ==============================
+        PAGE ANIMATION
+============================== */
+
+body{
+
+    animation:pageFade .4s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==============================
+        CUSTOM SELECTION
+============================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==============================
+        DISABLED BUTTON
+============================== */
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+/* ==============================
+        FOOTER SPACE
+============================== */
+
+.main{
+
+    padding-bottom:50px;
+
+}
+
+/* ==============================
+        END OF FILE
+============================== */

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | Profile</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h2>EduGenie</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li>
+
+                    <a href="../dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="ask-ai.html">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        Ask AI
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="quiz.html">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        Quiz Generator
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="summarize.html">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        Summarizer
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="roadmap.html">
+
+                        <i class="fa-solid fa-road"></i>
+
+                        Learning Roadmap
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="history.html">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        History
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#" id="logoutBtn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+        <main class="main">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>
+
+                        👤 My Profile
+
+                    </h2>
+
+                    <p>
+
+                        View and update your EduGenie account information.
+
+                    </p>
+
+                </div>
+
+            </header>
+
+            <!-- PROFILE FORM -->
+
+            <section class="recent">
+
+                <div class="recent-card" id="profileCard">
+
+                    <h2>
+
+                        Profile Information
+
+                    </h2>
+
+                    <br>
+
+                    <label>
+
+                        <strong>
+
+                            Full Name
+
+                        </strong>
+
+                    </label>
+
+                    <input type="text" id="name" placeholder="Enter your full name" style="
+                        width:100%;
+                        margin-top:10px;
+                        padding:15px;
+                        border-radius:12px;
+                        border:1px solid #d1d5db;
+                        outline:none;
+                    ">
+
+                    <br><br>
+
+                    <label>
+
+                        <strong>
+
+                            Email Address
+
+                        </strong>
+
+                    </label>
+
+                    <input type="email" id="email" placeholder="Enter your email" style="
+                        width:100%;
+                        margin-top:10px;
+                        padding:15px;
+                        border-radius:12px;
+                        border:1px solid #d1d5db;
+                        outline:none;
+                    ">
+
+                    <br><br>
+
+                    <label>
+
+                        <strong>
+
+                            New Password
+
+                        </strong>
+
+                    </label>
+
+                    <input type="password" id="password" placeholder="Leave empty if you don't want to change it" style="
+                        width:100%;
+                        margin-top:10px;
+                        padding:15px;
+                        border-radius:12px;
+                        border:1px solid #d1d5db;
+                        outline:none;
+                    ">
+
+                    <br><br>
+
+                    <div style="
+                        display:flex;
+                        gap:15px;
+                        flex-wrap:wrap;
+                    ">
+
+                        <button id="saveBtn" class="btn-primary">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Save Changes
+
+                        </button>
+
+                        <button id="resetBtn" class="btn-secondary">
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Reset
+
+                        </button>
+
+                        <button id="logoutBtn" class="btn-secondary">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Logout
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section> <!-- ===========================
+                PROFILE INFORMATION
+        ============================ -->
+
+            <section class="recent" style="margin-top:30px;">
+
+                <div class="recent-card">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:20px;
+                    ">
+
+                        <h2>
+
+                            Account Information
+
+                        </h2>
+
+                        <span style="
+                            color:#64748b;
+                            font-size:14px;
+                        ">
+
+                            EduGenie User Profile
+
+                        </span>
+
+                    </div>
+
+                    <div style="
+                        display:grid;
+                        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+                        gap:20px;
+                    ">
+
+                        <div class="card">
+
+                            <h3>Total AI Chats</h3>
+
+                            <h1 id="chatCount">0</h1>
+
+                        </div>
+
+                        <div class="card">
+
+                            <h3>Total Quizzes</h3>
+
+                            <h1 id="quizCount">0</h1>
+
+                        </div>
+
+                        <div class="card">
+
+                            <h3>Total Summaries</h3>
+
+                            <h1 id="summaryCount">0</h1>
+
+                        </div>
+
+                        <div class="card">
+
+                            <h3>Total Roadmaps</h3>
+
+                            <h1 id="roadmapCount">0</h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>
